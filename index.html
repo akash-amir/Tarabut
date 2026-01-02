@@ -14512,7 +14512,7 @@ display: none !important;
                                 
                             </li>
                               <li>
-                                <a href="#"  class=" text-dark" >About</a>
+                                <a href="#"  class=" text-dark" >Listings</a>
                                 
                                 <!-- Sub Megamenu -->
                               
@@ -14525,49 +14525,38 @@ display: none !important;
                             
                             <!-- Item With Sub -->
                             <li>
-                                <a href="#"  class=" text-dark"  >Services </a>
+                                <a href="#"  class=" text-dark"  >List Your Warehouse </a>
                                 
                                 <!-- Sub Megamenu -->
                                 
                                 <!-- End Sub Megamenu -->
                                 
                             </li>
-                            <!-- End Item With Sub -->
-                            
-                            <!-- Item With Sub -->
-                            <li>
-                                <a href="#"  class=" text-dark" >Process </a>
-                                
-                                <!-- Sub -->
-                               
-                                <!-- End Sub -->
-                                
-                            </li>
-                            <!-- End Item With Sub -->
-                            
-                            <!-- Item With Sub -->
-                            <li>
-                                <a href="#" class=" text-dark" >Contact </a>
-                                
-                                <!-- Sub -->
-                                
-                                <!-- End Sub -->
-                                
-                            </li>
-                              <li>
-                                <a href="#"  class=" text-dark" >Login</a>
+                             <li>
+                                <a href="#"  class=" text-dark"  >Login</a>
                                 
                                 <!-- Sub Megamenu -->
-                              
+                                
                                 <!-- End Sub Megamenu -->
                                 
                             </li>
+                            
+                            <!-- End Item With Sub -->
+                            
+                            <!-- Item With Sub -->
                             <!-- End Item With Sub -->                            
                             
                         </ul>
                         
                         <ul class="items-end clearlist" >
                             
+
+                        <li>
+                                <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+  </form>
+                        </li>
                             <!-- Language Selector -->
                             <li>
                                 <div class="gtranslate_wrapper" id="gt-wrapper-13436449"></div>
@@ -14616,8 +14605,8 @@ display: none !important;
                                         </p>
                                         
                                         <div class="local-scroll mt-n10 wow fadeInUp wch-unset" data-wow-delay="0.7s" data-wow-duration="1.2s" data-wow-offset="0">
-                                            <a href="#" class="btn btn-mod btn-large btn-round btn-hover-anim align-middle me-2 me-sm-5 mt-10" style="background: #25b8a6;"><span>Search Warehouses</span></a>
-                                            <a href="#" class="link-hover-anim align-middle lightbox mfp-iframe mt-10" data-link-animate="y"><i class="bi bi-caret-right-fill"></i> List Your Warehouse</a>
+                                            <a href="https://agents.onboardsoft.me/client/register/6dc96a981326512a8fbfb0765fc01e8e/17be5ffd9d4ff24aa792564a33b74b8a" class="btn btn-mod btn-large btn-round btn-hover-anim align-middle me-2 me-sm-5 mt-10" style="background: #25b8a6;"><span>Get Started </span></a>
+                                            <a href="https://my.onboardsoft.me/rfq/home/17be5ffd9d4ff24aa792564a33b74b8a" class="btn btn-mod btn-large btn-round btn-hover-anim align-middle me-2 me-sm-5 mt-10" style="background: #25b8a6;" ><span>Request For Quotations </span></a>
                                         </div>
                                         
                                     </div>
@@ -17487,6 +17476,408 @@ $(document).ready(function(){
         
     <!-- Translator Container -->
 <div class="gtranslate_wrapper" id="gt-wrapper-13436449"></div>
+<!-- Product Detail Modal -->
+<div id="productModal" class="product-modal" style="display: none;">
+  <div class="product-modal-content">
+    <button class="product-modal-close">&times;</button>
+    <div class="product-modal-body">
+      <div class="product-modal-left-section">
+        <div class="product-modal-image">
+          <img id="modalProductImage" src="" alt="Product Image">
+        </div>
+        <div class="product-modal-map">
+          <h4 style="margin-bottom: 10px; font-size: 14px; color: #333; font-weight: 600; text-transform: uppercase;">Saudi Arabia Location</h4>
+          <div class="map-boxed">
+            <iframe
+              src="https://www.google.com/maps?q=Saudi%20Arabia&output=embed"
+              width="100%"
+              height="280"
+              style="border:0; border-radius: 8px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+      <div class="product-modal-info">
+        <h2 id="modalProductTitle">Product Title</h2>
+        <p class="product-price" id="modalProductPrice">AED 190,000 Yearly</p>
+        <div class="product-description">
+          <h4>Description</h4>
+          <p id="modalProductDescription">This warehouse located in Sedous presents an optimal space for your business needs.</p>
+        </div>
+        <div class="product-features">
+          <h4>Features</h4>
+          <ul id="modalProductFeatures">
+            <li>Prime Location</li>
+            <li>Spacious Area</li>
+            <li>Modern Facilities</li>
+            <li>Accessible by Road</li>
+          </ul>
+        </div>
+        <div class="product-actions">
+          <button class="btn-contact" onclick="alert('Contact form coming soon!')">Contact Seller</button>
+          <button class="btn-close-modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Product Modal Styles -->
+<style>
+.product-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.product-modal-content {
+  background-color: white;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 95%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.3s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.product-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+  z-index: 1001;
+  transition: color 0.3s ease;
+}
+
+.product-modal-close:hover {
+  color: #25b8a6;
+}
+
+.product-modal-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 40px;
+}
+
+.product-modal-left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-modal-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.product-modal-image img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.product-modal-map {
+  width: 100%;
+  max-width: 350px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-modal-map h4 {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.product-modal-map .map-boxed {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-modal-map .map-boxed iframe {
+  width: 100%;
+  height: 280px;
+  border: none;
+  border-radius: 8px;
+}
+
+.product-modal-info {
+  padding-right: 10px;
+}
+
+.product-modal-info h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 20px;
+  color: #25b8a6;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.product-description,
+.product-features {
+  margin-bottom: 20px;
+}
+
+.product-description h4,
+.product-features h4 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.product-description p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.product-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-features li {
+  padding: 8px 0;
+  color: #666;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.product-features li:before {
+  content: "✓ ";
+  color: #25b8a6;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-contact,
+.btn-close-modal {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-contact {
+  background-color: #25b8a6;
+  color: white;
+}
+
+.btn-contact:hover {
+  background-color: #1e9281;
+}
+
+.btn-close-modal {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.btn-close-modal:hover {
+  background-color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-modal-body {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .product-modal-left-section {
+    gap: 15px;
+  }
+  
+  .product-modal-image {
+    max-width: 100%;
+  }
+  
+  .product-modal-image img {
+    max-width: 100%;
+  }
+  
+  .product-modal-map {
+    max-width: 100%;
+  }
+  
+  .product-modal-info {
+    padding-right: 0;
+  }
+  
+  .product-actions {
+    flex-direction: column;
+  }
+}
+
+/* Make product items clickable */
+.features-item {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+</style>
+
+<!-- Product Modal Script -->
+<script>
+(function() {
+  const modal = document.getElementById('productModal');
+  const closeBtn = document.querySelector('.product-modal-close');
+  const closeModalBtn = document.querySelector('.btn-close-modal');
+  const featuresItems = document.querySelectorAll('.features-item');
+
+  // Sample product data - replace with your actual data
+  const productData = {
+    0: {
+      title: 'AED 190,000 Yearly',
+      price: 'AED 190,000 Yearly',
+      image: 'assests/5472454-1066x800.webp',
+      description: 'This warehouse located in Sedous presents an optimal space for your business needs. Perfect for storage, distribution, and logistics operations.',
+      features: ['Prime Location', 'Spacious Area', 'Modern Facilities', 'Accessible by Road', 'Security Services', 'Parking Available']
+    },
+    1: {
+      title: 'AED 190,000 Yearly',
+      price: 'AED 190,000 Yearly',
+      image: 'assests/5472455-1066x800.webp',
+      description: 'This warehouse located in Sedous presents an optimal space for your business needs. Great for commercial and industrial use.',
+      features: ['Prime Location', 'Spacious Area', 'Modern Facilities', 'Accessible by Road', 'Security Services', 'Parking Available']
+    },
+    2: {
+      title: 'AED 190,000 Yearly',
+      price: 'AED 190,000 Yearly',
+      image: 'assests/5422549-1066x800.webp',
+      description: 'This warehouse located in Sedous presents an optimal space for your business needs. Ideal for expanding your business operations.',
+      features: ['Prime Location', 'Spacious Area', 'Modern Facilities', 'Accessible by Road', 'Security Services', 'Parking Available']
+    },
+    3: {
+      title: 'AED 190,000 Yearly',
+      price: 'AED 190,000 Yearly',
+      image: 'assests/5472454-1066x800.webp',
+      description: 'This warehouse located in Sedous presents an optimal space for your business needs. Premium location with excellent facilities.',
+      features: ['Prime Location', 'Spacious Area', 'Modern Facilities', 'Accessible by Road', 'Security Services', 'Parking Available']
+    }
+  };
+
+  // Open modal function
+  function openModal(index) {
+    const product = productData[index];
+    if (product) {
+      document.getElementById('modalProductTitle').textContent = product.title;
+      document.getElementById('modalProductPrice').textContent = product.price;
+      document.getElementById('modalProductImage').src = product.image;
+      document.getElementById('modalProductDescription').textContent = product.description;
+      
+      const featuresList = document.getElementById('modalProductFeatures');
+      featuresList.innerHTML = '';
+      product.features.forEach(feature => {
+        const li = document.createElement('li');
+        li.textContent = feature;
+        featuresList.appendChild(li);
+      });
+      
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  // Close modal function
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  // Add click event to all product items
+  featuresItems.forEach((item, index) => {
+    item.addEventListener('click', function() {
+      openModal(index);
+    });
+  });
+
+  // Close button events
+  closeBtn.addEventListener('click', closeModal);
+  closeModalBtn.addEventListener('click', closeModal);
+
+  // Close modal when clicking outside of it
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Close modal on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
+  });
+})();
+</script>
 
 <!-- Configuration Script -->
 <script type="text/javascript" id="gt_widget_script_13436449-js-before">
