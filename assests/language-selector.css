@@ -1,0 +1,115 @@
+/* ========================================
+   Language Selector Styles
+   ======================================== */
+
+.language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.language-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.language-toggle:hover {
+  background-color: #e8e8e8;
+  border-color: #999;
+}
+
+.lang-icon {
+  font-size: 16px;
+}
+
+.lang-text {
+  font-weight: 600;
+  min-width: 30px;
+}
+
+.lang-arrow {
+  font-size: 10px;
+  transition: transform 0.3s ease;
+}
+
+.language-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  min-width: 160px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  margin-top: 5px;
+}
+
+.language-menu.open {
+  max-height: 400px;
+  opacity: 1;
+}
+
+.lang-option {
+  display: block;
+  padding: 10px 16px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+  font-size: 13px;
+}
+
+.lang-option:hover {
+  background-color: #f5f5f5;
+  color: #7c3aed;
+}
+
+.lang-option.active {
+  background-color: #f0f0f0;
+  color: #7c3aed;
+  border-left-color: #7c3aed;
+  font-weight: 600;
+}
+
+.lang-option:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.lang-option:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Hide Google Translate bar */
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.goog-te-gadget {
+  color: transparent;
+  height: 0;
+  visibility: hidden;
+}
+
+#gt-hidden {
+  display: none !important;
+}
